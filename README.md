@@ -21,7 +21,8 @@ make buildx
 
 ```
 docker pull afghanistanyn/prometheus-nacos-sd
-
+docker run -it -d -v /tmp:/tmp afghanistanyn/prometheus-nacos-sd --nacos.address=192.168.1.1:8848 --nacos.namespace=dev --output.file=/tmp/nacos_sd_dev.json
+ls /tmp/nacos_sd_dev.json
 ```
 
 
