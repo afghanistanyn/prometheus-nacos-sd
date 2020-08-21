@@ -30,5 +30,4 @@ fmt:
 release: buildx
 	git tag v$(VERSION)
 	git push origin v$(VERSION)
-	upx bin/prometheus-nacos-sd_linux_amd64_v$(VERSION) || true
 	ghr -u afghanistanyn v$(VERSION) bin/prometheus-nacos-sd_linux_amd64_v$(VERSION)
