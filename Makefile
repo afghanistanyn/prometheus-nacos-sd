@@ -12,8 +12,8 @@ build: deps
 	go build -ldflags "-X main.Version=$(VERSION) -w -s" -o bin/prometheus-nacos-sd .
 
 buildx: deps
-        GOGS=linux GOARCH=amd64 go build -ldflags "-X main.Version=$(VERSION) -w -s" -o "bin/prometheus-nacos-sd_linux_amd64_v$(VERSION)"  .
-		upx bin/prometheus-nacos-sd_linux_amd64_v$(VERSION) || true
+	GOGS=linux GOARCH=amd64 go build -ldflags "-X main.Version=$(VERSION) -w -s" -o "bin/prometheus-nacos-sd_linux_amd64_v$(VERSION)"  .
+	upx bin/prometheus-nacos-sd_linux_amd64_v$(VERSION) || true
 
 lint:
 	golint ${GOFILES_NOVENDOR}
