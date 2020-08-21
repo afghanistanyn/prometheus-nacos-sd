@@ -2,18 +2,30 @@
 
 Prometheus service discovery using nacos and `file_sd_config`.
 
+----
 ## Install
 
 ### Precompiled binaries
 
 Download from https://github.com/afghanistanyn/prometheus-nacos-sd
 
+
+### manual build
+```
+git clone https://github.com/afghanistanyn/prometheus-nacos-sd
+cd prometheus-nacos-sd
+make buildx
+```
+
 ### Docker
 
 ```
 docker pull afghanistanyn/prometheus-nacos-sd
+
 ```
 
+
+----
 ## Usage
 
 - run 
@@ -31,7 +43,7 @@ docker pull afghanistanyn/prometheus-nacos-sd
 
 ```
 
-
+---- 
 ## Generated json format
 
 generated json should be follow prometheus `file_sd_config` format like below:

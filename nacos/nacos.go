@@ -224,8 +224,8 @@ func createNacosNamingClient(conf NacosDiscovery) naming_client.INamingClient {
 	}
 
 	currentProcessPath, _ := os.Executable()
-	cacheDir := os.TempDir() + filepath.Base(currentProcessPath) + string(os.PathSeparator) + "cache" + string(os.PathSeparator) + conf.Namespace
-	logDir := os.TempDir() + filepath.Base(currentProcessPath) + string(os.PathSeparator) + "log" + string(os.PathSeparator) + conf.Namespace
+	cacheDir := os.TempDir() + string(os.PathSeparator) + filepath.Base(currentProcessPath) + string(os.PathSeparator) + "cache" + string(os.PathSeparator) + conf.Namespace
+	logDir := os.TempDir() + string(os.PathSeparator) + filepath.Base(currentProcessPath) + string(os.PathSeparator) + "log" + string(os.PathSeparator) + conf.Namespace
 
 	clientConfig := constant.ClientConfig{
 		NamespaceId:          conf.Namespace,
