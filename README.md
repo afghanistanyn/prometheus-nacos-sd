@@ -7,7 +7,7 @@ Prometheus service discovery using nacos and `file_sd_config`.
 
 ### Precompiled binaries
 
-Download from https://github.com/afghanistanyn/prometheus-nacos-sd
+Download from https://github.com/afghanistanyn/prometheus-nacos-sd/releases
 
 
 ### manual build
@@ -20,7 +20,7 @@ make buildx
 ### Docker
 
 ```
-docker pull afghanistanyn/prometheus-nacos-sd
+docker pull afghanistanyn/prometheus-nacos-sd:v1.0
 docker run -it -d -v /tmp:/tmp afghanistanyn/prometheus-nacos-sd --nacos.address=192.168.1.1:8848 --nacos.namespace=dev --output.file=/tmp/nacos_sd_dev.json
 ls /tmp/nacos_sd_dev.json
 ```
